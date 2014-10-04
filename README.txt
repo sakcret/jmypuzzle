@@ -18,9 +18,9 @@
 
 http://www.enova-tech.net/lab/jMyPuzzle        
 
-JMyPuzzle V-0.1
+JMyPuzzle V-0.2
 
-JMyPuzzle is an image carousel written in Javascript and based on the Jquery framework. To make it work you must have a copy of jquery in your website directories. 
+JMyPuzzle is an word puzzle written in Javascript and based on the Jquery library. To make it work you must have a copy of jquery in your website directories, or use the jquery CDN.
 
 
 ### How do I install JMyPuzzle ?
@@ -28,41 +28,44 @@ JMyPuzzle is an image carousel written in Javascript and based on the Jquery fra
 Installing JMyPuzzle is very easy. Starting from the fact that you already know html and css, you just have to integrate to your web page the JMyPuzzle script, and to give it some custom parameters to make it work the way you want it (ajax functions, etc..). Using JMyPuzzle is very simple even though it is highly customizable. JMyPuzzle will take care of transforming a list of word or images into a dynamic puzzle.
 
 Your html code should look like the one below :
-
-   1. <div class="JMyPuzzle">  
-   2.     <p id="trials"></p>
-   3.     <ul>  
-   4.         <li>or not</li>  
-   5.         <li>be</li>  
-   6.         <li>to</li>  
-   7.         <li>question !</li>  
-   8.         <li>To</li>  
-   9.         <li>be,</li>  
-  10.     </ul>  
-  11.     <input type="button" class="button" id="reset" value="reset" />
-  12.	  <input type="button" class="button" id="check" value="check" />
-  13. </div>  
-
+```html
+<div class="JMyPuzzle">
+    <p id="trials"></p>
+        <ul>
+            <li>or not</li>
+            <li>be</li>
+            <li>to</li>
+            <li>question !</li>
+            <li>To</li>
+            <li>be,</li>
+    </ul>
+    <input type="button" class="button" id="reset" value="reset" />
+    <input type="button" class="button" id="check" value="check" />
+</div>
+```
 
 If you put image instead of words, please note that the size must be given. This is to avoid display bugs.
 
 Once you have a proper html code showing your list, you are just two step away.
 
-First, it is necessary to link the page with JQuery, this is the library requested by JMyPuzzle. After what we integrate the JMyPuzzlel script and its css presentation file :
+First, it is necessary to include jquery and jqueru UI libraries in the page.
+After what we integrate the JMyPuzzlel script and its css presentation file :
+```html
+<link rel="stylesheet" type="text/css" href="css/jmypuzzle.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jmypuzzle.min.js"></script>
+```
 
-   1. <link rel="stylesheet" type="text/css" href="JMyPuzzle.css" />  
-   2. <script type="text/javascript" src="jquery.js"></script>  
-   3. <!-- Some other scripts (jquery extensions) are also necessary to make it work. Have a look at ui.mouse, ui.draggable, and jquery.dimensions -->
-   3. <script type="text/javascript" src="JMyPuzzle.js"></script>  
+In this state, the puzzle is ready to work.
 
-In this state, the carousel is ready to work. The only missing step is to pass the custom parameters that you wish for your custom carousel. In the example below, we set a carousel with a 100% width and scrolling image by image :
-
-   1. $(function() {  
-   2.     $(".JMyPuzzle").jMyPuzzle({  
-   3.         fnOnCheck: function(jSonResults){ alert("Bravo !\nYour success rate : " + jSonResults.success_rate + "%") } 
-   5.     });  
-   6. });  
-
+```javascript
+$(function() {
+    $(".JMyPuzzle").jMyPuzzle({
+        fnOnCheck: function(jSonResults){ alert("Bravo !\nYour success rate : " + jSonResults.success_rate + "%") }
+    });
+});
+```
 
 ### What are the available configuration parameters ?
 
