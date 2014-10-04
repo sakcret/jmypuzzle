@@ -1,3 +1,4 @@
+*This plugin was initially written in 2007, as a js activity for the French Learning website [http://www.clickonfrench.com]. Then the plugin evolved independently to follow our internal needs. However, I took time to test it and make it work with a recent version of jquery, and that's why I publish now an updated version. Hope it can be useful !*
 ```
                          ____                          ___
     __  /'\_/°\         /\  _'\                       /\_ \
