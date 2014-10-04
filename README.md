@@ -73,17 +73,17 @@ $(function() {
 jMyCarousel has a lot of different configuration options :
 
 ```
-**answer:** "7,2,1,3,8,5,6,4",			// right answer's order
+answer: "7,2,1,3,8,5,6,4",			// right answer's order
         
-**maxTrials:** 3,							// maximum number of trials, 0 for unlimited
-**classOnValid:** 'valid',				// class to apply to the element when valid
-**classOnNotValid:** 'notValid',			// class to apply to the element when not valid
-**classOnMiValid:** 'miValid',			// class to apply to the element when mi valid
+maxTrials: 3,							// maximum number of trials, 0 for unlimited
+classOnValid: 'valid',				// class to apply to the element when valid
+classOnNotValid: 'notValid',			// class to apply to the element when not valid
+classOnMiValid: 'miValid',			// class to apply to the element when mi valid
         			
-**fnOnCheck:** null,						// To call its custom callback function at the end of the check. The function will be provided with the results variables of the exercise.
+fnOnCheck: null,						// To call its custom callback function at the end of the check. The function will be provided with the results variables of the exercise.
         								// example : function(jSonResults){ alert("Your success rate : " + jSonResults.success_rate + "%") }
         									
-**ajaxResultUrl:** '',					// Ajax url where to send the results. The results will be sent by post with the following variables :
+ajaxResultUrl: '',					// Ajax url where to send the results. The results will be sent by post with the following variables :
         									// nb_words : The total number of words
         									// nb_valid : The number of valid elements (where the user is right)
         									// nb_not_valid : The number of non valid elements (where the user is not right)
@@ -93,7 +93,7 @@ jMyCarousel has a lot of different configuration options :
         									// max_trials : The maximum number of trials allowed 
         									// answer : The answer given by the user
         										
-**fnOnAjax:** null,						// custom function to call at the end of the ajax treatment. enables to get the data sent back from the server : example function(data){ alert(data); }
+fnOnAjax: null,						// custom function to call at the end of the ajax treatment. enables to get the data sent back from the server : example function(data){ alert(data); }
 ```
 
 
