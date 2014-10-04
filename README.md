@@ -1,4 +1,4 @@
-*This plugin was initially written in 2007, as a js activity for the French Learning website [http://www.clickonfrench.com]. Then the plugin evolved independently to follow our internal needs. However, I took time to test it and make it work with a recent version of jquery, and that's why I publish now an updated version. Hope it can be useful !*
+*This is a legacy work. It was initially written in 2007, as an experimental js activity for the French Learning website [http://www.clickonfrench.com]. Then the plugin evolved independently to follow our internal needs, and get a better code structure. However, I thought it would be worth it to take time to test it and make it work with a recent version of jquery, and that's why I publish now an updated version. Hope it can be useful !*
 ```
                          ____                          ___
     __  /'\_/°\         /\  _'\                       /\_ \
@@ -17,8 +17,6 @@
 /// (> <) Worship Bunny. There is only one, he is our god !    ///
 //////////////////////////////////////////////////////////////////
 ```
-
-http://www.enova-tech.net/lab/jMyPuzzle        
 
 JMyPuzzle V-0.2
 
