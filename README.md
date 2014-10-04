@@ -72,6 +72,7 @@ $(function() {
 
 jMyCarousel has a lot of different configuration options :
 
+```
 **answer:** "7,2,1,3,8,5,6,4",			// right answer's order
         
 **maxTrials:** 3,							// maximum number of trials, 0 for unlimited
@@ -93,7 +94,7 @@ jMyCarousel has a lot of different configuration options :
         									// answer : The answer given by the user
         										
 **fnOnAjax:** null,						// custom function to call at the end of the ajax treatment. enables to get the data sent back from the server : example function(data){ alert(data); }
-        
+```
 
 
 You can have fun playing around with the different options.
