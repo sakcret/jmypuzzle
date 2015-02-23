@@ -1,89 +1,71 @@
-*{
-  margin:0;
-  padding:0;
+div.jMyPuzzle {
+  display: block;
+  border: 1px solid blue;
+  margin: auto;
+  height: 200px;
 }
-body, p{
-   margin:0;
-   padding:0;
+div.jMyPuzzle ul {
+  display: block;
+  position: absolute;
+  margin-top: 30px;
+  width: 100%;
+  /* Do not remove */
 }
-
-div.jMyPuzzle{
-	display:block;
-	border:1px solid blue;
-	margin:auto;
-	height:200px;
+div.jMyPuzzle ul li {
+  display: block;
+  float: left;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: white;
+  padding: 4px;
+  margin: 2px;
+  background-color: #031fc6;
+  border: 2px solid #02168c;
+  cursor: pointer;
 }
-
-ul{
-	display:block;
-	position:absolute;
-	margin-top:30px;
-	width:100%; 	/* Do not remove */
+div.jMyPuzzle input.button {
+  border: 1px solid #aaa;
+  color: #555;
+  cursor: pointer;
 }
-
-ul li{
-	display:block;
-	float:left;
-	font-size:1.6em;
-	font-weight:bold;
-	color:white;
-	padding:4px;
-	margin:2px;
-	background-color:#031fc6;
-	border:2px solid #02168c;
-	cursor:pointer;
+div.jMyPuzzle input.button:hover {
+  border: 1px solid #333;
+  color: #000;
 }
-
-input.button{
-	border:1px solid #aaa;
-	color:#555;
-	cursor:pointer;
+div.jMyPuzzle input.button#reset {
+  float: right;
+  margin-right: 20px;
+  margin-top: 100px;
+  background: transparent url('lightning.png') 5% center no-repeat;
+  padding: 3px 3px 3px 40px;
+  width: 120px;
+  font-size: 1.2em;
 }
-input.button:hover{
-	border:1px solid #333;
-	color:#000;
+div.jMyPuzzle input.button#check {
+  float: right;
+  margin-right: 20px;
+  margin-top: 100px;
+  background: transparent url('check.png') 5% center no-repeat;
+  padding: 3px 3px 3px 40px;
+  width: 120px;
+  font-size: 1.2em;
 }
-
-input.button#reset{
-	float:right;
-	margin-right:20px;
-	margin-top:100px;
-	background:transparent url('img/lightning.png') 5% center no-repeat; 
-	padding:3px 3px 3px 40px;
-	width:120px;
-	font-size:1.2em;
+div.jMyPuzzle #trials {
+  font-weight: bold;
+  font-size: 1.3em;
+  border-bottom: 1px solid blue;
+  margin-bottom: 10px;
+  text-align: right;
 }
-
-input.button#check{
-	float:right;
-	margin-right:20px;
-	margin-top:100px;
-	background:transparent url('img/check.png') 5% center no-repeat;
-	padding:3px 3px 3px 40px;
-	width:120px;
-	font-size:1.2em;
+div.jMyPuzzle .normal {
+  background-color: #031fc6;
 }
-
-#trials{
-	font-weight:bold;
-	font-size:1.3em;
-	border-bottom:1px solid blue;
-	margin-bottom:10px;
-	text-align:right;
+div.jMyPuzzle .notValid {
+  background-color: #fb0b1c;
 }
-
-.normal{
-	background-color:#031fc6;
+div.jMyPuzzle .miValid {
+  background-color: #fdb222;
 }
-
-.notValid{
-	background-color:#fb0b1c;
-}
-
-.miValid{
-	background-color:#fdb222;
-}
-
-.valid{
-	background-color:#41CA05;
+div.jMyPuzzle .valid {
+  background-color: #41CA05;
 }
