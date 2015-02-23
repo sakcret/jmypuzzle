@@ -118,8 +118,8 @@ $.fn.jMyPuzzle = function(o) {
 				return check(0, answerTab);							// call the check function
 			});
 		}
-		if($('#reset').length){
-			$('#reset').click(function(){							// on reset event
+		if($('.reset').length){
+			$('.reset').click(function(){							// on reset event
 				var nbElts = li.size();
 				var eltN = 0;
 				for(i=0; i<nbElts; i++){
