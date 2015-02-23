@@ -1,8 +1,15 @@
+@wordsColor: #2d96f0;
+@errorColor: #fb0b1c;
+@semivalidColor: #fdb222;
+@validColor: #41CA05;
+
 div.jMyPuzzle{
 	display:block;
-	border:1px solid blue;
+    border: 1px solid #ccc;
 	margin:auto;
 	height:200px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    width: 750px;
 
   ul{
     display:block;
@@ -16,11 +23,29 @@ div.jMyPuzzle{
       font-size:1.6em;
       font-weight:bold;
       color:white;
-      padding:4px;
+      padding:4px 10px 4px 10px;
       margin:2px;
-      background-color:#031fc6;
-      border:2px solid #02168c;
+      background-color:@wordsColor;
       cursor:pointer;
+
+      &.normal{
+        background-color:@wordsColor;
+      }
+      &.normal:hover{
+        background-color:darken(@wordsColor, 20%);
+      }
+
+      &.notValid{
+        background-color:@errorColor;
+      }
+
+      &.miValid{
+        background-color:@semivalidColor;
+      }
+
+      &.valid{
+        background-color:@validColor;
+      }
     }
   }
 
@@ -34,7 +59,7 @@ div.jMyPuzzle{
       color:#000;
     }
 
-    &#reset{
+    &.reset{
       float:right;
       margin-right:20px;
       margin-top:100px;
@@ -44,7 +69,7 @@ div.jMyPuzzle{
       font-size:1.2em;
     }
 
-    &#check{
+    &.check{
       float:right;
       margin-right:20px;
       margin-top:100px;
@@ -55,28 +80,12 @@ div.jMyPuzzle{
     }
   }
 
-  #trials{
+  .trials{
     font-weight:bold;
     font-size:1.3em;
-    border-bottom:1px solid blue;
+    border-bottom:1px solid #ccc;
     margin-bottom:10px;
     text-align:right;
-  }
-
-  .normal{
-    background-color:#031fc6;
-  }
-
-  .notValid{
-    background-color:#fb0b1c;
-  }
-
-  .miValid{
-    background-color:#fdb222;
-  }
-
-  .valid{
-    background-color:#41CA05;
   }
 
 

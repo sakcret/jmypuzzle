@@ -64,8 +64,8 @@ $.fn.jMyPuzzle = function(o) {
 				'position':'absolute'
 				});
 		
-		if(o.maxTrials > 0 && $('#trials').length){					// initial filling of the trial layer 
-			$('#trials').html(0 + '/' + o.maxTrials);
+		if(o.maxTrials > 0 && $('.trials').length){					// initial filling of the trial layer 
+			$('.trials').html(0 + '/' + o.maxTrials);
 		}
 		
 
@@ -102,8 +102,8 @@ $.fn.jMyPuzzle = function(o) {
 			elts[n++] = elt;
 		});
 		
-		if($('#check').length){
-			$('#check').click(function(){							// on check event
+		if($('.check').length){
+			$('.check').click(function(){							// on check event
 				nbValid=0;
 				nbNotValid=0;
 				nbMiValid=0;
@@ -111,7 +111,7 @@ $.fn.jMyPuzzle = function(o) {
 				if(o.maxTrials > 0){								// set the trials counter and display update
 					if(nbTrials >= o.maxTrials){ return; }
 					nbTrials ++;
-					$('#trials').html(nbTrials + '/' + o.maxTrials);
+					$('.trials').html(nbTrials + '/' + o.maxTrials);
 				}
 				var answerTab = o.answer.split(",");				// check error in case the given answer doesn't match properly with the set answer
 				if(answerTab.length != li.size()){ alert("error - answer doesn't match !"); }
@@ -310,10 +310,6 @@ function css(el, prop) {
 
 function width(el) {
     	return el[0].offsetWidth + css(el, 'marginLeft') + css(el, 'marginRight');
-}
-
-function debug(str){
-	$('.debug').html($('.debug').html() + str + "<br/>");
 }
 
 })(jQuery);

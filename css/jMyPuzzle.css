@@ -1,8 +1,10 @@
 div.jMyPuzzle {
   display: block;
-  border: 1px solid blue;
+  border: 1px solid #ccc;
   margin: auto;
   height: 200px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  width: 750px;
 }
 div.jMyPuzzle ul {
   display: block;
@@ -17,11 +19,25 @@ div.jMyPuzzle ul li {
   font-size: 1.6em;
   font-weight: bold;
   color: white;
-  padding: 4px;
+  padding: 4px 10px 4px 10px;
   margin: 2px;
-  background-color: #031fc6;
-  border: 2px solid #02168c;
+  background-color: #2d96f0;
   cursor: pointer;
+}
+div.jMyPuzzle ul li.normal {
+  background-color: #2d96f0;
+}
+div.jMyPuzzle ul li.normal:hover {
+  background-color: #0c62ab;
+}
+div.jMyPuzzle ul li.notValid {
+  background-color: #fb0b1c;
+}
+div.jMyPuzzle ul li.miValid {
+  background-color: #fdb222;
+}
+div.jMyPuzzle ul li.valid {
+  background-color: #41ca05;
 }
 div.jMyPuzzle input.button {
   border: 1px solid #aaa;
@@ -32,7 +48,7 @@ div.jMyPuzzle input.button:hover {
   border: 1px solid #333;
   color: #000;
 }
-div.jMyPuzzle input.button#reset {
+div.jMyPuzzle input.button.reset {
   float: right;
   margin-right: 20px;
   margin-top: 100px;
@@ -41,7 +57,7 @@ div.jMyPuzzle input.button#reset {
   width: 120px;
   font-size: 1.2em;
 }
-div.jMyPuzzle input.button#check {
+div.jMyPuzzle input.button.check {
   float: right;
   margin-right: 20px;
   margin-top: 100px;
@@ -50,22 +66,10 @@ div.jMyPuzzle input.button#check {
   width: 120px;
   font-size: 1.2em;
 }
-div.jMyPuzzle #trials {
+div.jMyPuzzle .trials {
   font-weight: bold;
   font-size: 1.3em;
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
   text-align: right;
-}
-div.jMyPuzzle .normal {
-  background-color: #031fc6;
-}
-div.jMyPuzzle .notValid {
-  background-color: #fb0b1c;
-}
-div.jMyPuzzle .miValid {
-  background-color: #fdb222;
-}
-div.jMyPuzzle .valid {
-  background-color: #41CA05;
 }
