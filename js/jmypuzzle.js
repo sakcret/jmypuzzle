@@ -42,7 +42,7 @@ $.fn.jMyPuzzle = function(o) {
         										                // answer : The answer given by the user
         										
 		fnOnAjax:null,							            // custom function to call at the end of the ajax treatment. enables to get the data sent back from the server : example function(data){ alert(data); }
-        fnOnReset:null,
+        fnOnReset:_fnOnReset,
         //private datas
         
         elts: new Array()
@@ -310,6 +310,11 @@ function css(el, prop) {
 
 function width(el) {
     	return el[0].offsetWidth + css(el, 'marginLeft') + css(el, 'marginRight');
+}
+
+//@overwrite function prevent o.fnOnReset is not a function
+function _fnOnReset(){
+	//do something
 }
 
 })(jQuery);
